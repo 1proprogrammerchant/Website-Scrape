@@ -29,8 +29,7 @@ empty_row = sheet.max_row + 1
 # Write the column headers if the sheet is empty
 if empty_row == 2:
     column_names = [
-        "xx" #xx means column header name add as many as needed
-        
+        "xx" #xx means column header name add as many as needed        
     ]
     for column_index, column_name in enumerate(column_names, start=1):
         sheet.cell(row=1, column=column_index).value = column_name
