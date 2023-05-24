@@ -51,7 +51,7 @@ while True:
 
     # Iterate over each item element
     for item_element in item_elements:
-        # Find the a[class='title truncate'] element within the current item element
+        # Find the x[class='x'] element within the current item element
         try:
             first_element = item_element.find_element(By.CSS_SELECTOR, "x[class='x']") #x equals your css and selector
             first_data = first_element.text
