@@ -1,5 +1,5 @@
-# a nice scipt to scrape sites ...you can have it go through multiple
-# pages also..use css selectors..Enjoy! - Kerry
+# a nice scipt to scrape sites and save to excel file for uploading ...you can have it go through multiple
+# pages also..use css selectors..Modify code as needed....Enjoy! - Kerry
 
 import openpyxl
 import datetime
@@ -16,7 +16,7 @@ skip_value = 12 # use this if you have a skip value in the url
 
 # Load existing Excel workbook or create a new one if it doesn't exist
 try:
-    workbook = openpyxl.load_workbook("E:\\xx.xlsx") # xx = renme xls file
+    workbook = openpyxl.load_workbook("E:\\xx.xlsx") # xx = rename xls file
     sheet = workbook.active
 except FileNotFoundError:
     workbook = openpyxl.Workbook()
@@ -38,7 +38,7 @@ if empty_row == 2:
 # Scrape data and check VENUE NAME column
 while True:
     # Update the URL with the skip value
-    url = f"https://www.thesite.org" #add your site as needed
+    url = f"https://www.thesite.org" #add your site as needed add skip if need may be named differently you should get it
 
     # Navigate to the website
     driver.get(url)
